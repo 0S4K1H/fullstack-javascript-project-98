@@ -8,3 +8,7 @@
 Este proyecto incluye un juego que verifica si un número es par o impar.
 Puedes ver la grabación en asciinema aquí:
 [![Ver demo en asciinema](https://asciinema.org/a/ifxqSuZsJaOSj568RpYLn1Vkq.svg)](https://asciinema.org/a/ifxqSuZsJaOSj568RpYLn1Vkq)
+
+## Proyecto Calculadora (brain-calc)
+(https://asciinema.org/a/CMUuFPdxCrfSally7u6KmbOqy)
+
