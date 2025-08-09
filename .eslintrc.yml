@@ -1,10 +1,9 @@
-extends:
-  - airbnb-base
-
 env:
-  browser: true
   node: true
   es2021: true
+
+extends:
+  - eslint:recommended
 
 parserOptions:
   ecmaVersion: 2020
@@ -13,3 +12,6 @@ parserOptions:
 rules:
   no-console: off
   import/extensions: off
+  quotes:
+    - error
+    - single
