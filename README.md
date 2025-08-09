@@ -12,3 +12,8 @@ Puedes ver la grabación en asciinema aquí:
 ## Proyecto Calculadora (brain-calc)
 (https://asciinema.org/a/CMUuFPdxCrfSally7u6KmbOqy)
 
+## Brain GCD
+(https://asciinema.org/a/hBF1UtCgrNHO8UiquRv7SKb2N)
+
+
+
