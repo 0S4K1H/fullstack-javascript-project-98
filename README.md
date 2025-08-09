@@ -15,5 +15,8 @@ Puedes ver la grabación en asciinema aquí:
 ## Brain GCD
 (https://asciinema.org/a/hBF1UtCgrNHO8UiquRv7SKb2N)
 
+## Brain Prime
+(https://asciinema.org/a/SMxX0srPATIujkuWogqvENaey)
+
 
 
