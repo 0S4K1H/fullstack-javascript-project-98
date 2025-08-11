@@ -1,7 +1,7 @@
-import readline from 'readline-sync';
+import readlineSync from 'readline-sync';
 
-export default function greetuser() {
+export default function greetUser() {
   console.log('¡Bienvenido a Brain Games!');
-  const name = readline.question('¿Cual es tu nombre? ');
+  const name = readlineSync.question('¿Cuál es tu nombre? ');
   console.log(`¡Bienvenido ${name}!`);
 }
