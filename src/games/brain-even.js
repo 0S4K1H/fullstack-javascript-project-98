@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
 
 const isEven = (num) => num % 2 === 0;
 
 export default function runEvenGame() {
-  console.log('Bienvenido a Brain Games!');
-  const name = readlineSync.question('Cual es tu nombre? ');
-  console.log(`Hola, ${name}!`);
-  console.log('Responde "yes" si el numero es par, de lo contrario responde "no".');
+  const name = greetUser(); // ✅ saludo uniforme
+
+  console.log('Responde "yes" si el número es par, de lo contrario responde "no".');
 
   let correctAnswers = 0;
 
@@ -17,21 +17,15 @@ export default function runEvenGame() {
 
     const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
 
-    if (answer !== 'yes' && answer !== 'no') {
+    if (answer !== correctAnswer) {
       console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`Intentemoslo de nuevo, ${name}!`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       return;
     }
 
-    if (answer === correctAnswer) {
-      console.log('Correcto!');
-      correctAnswers += 1;
-    } else {
-      console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`Intentemoslo de nuevo, ${name}!`);
-      return;
-    }
+    console.log('¡Correcto!');
+    correctAnswers += 1;
   }
 
-  console.log(`Felicidades, ${name}!`);
+  console.log(`¡Felicidades, ${name}!`);
 }
