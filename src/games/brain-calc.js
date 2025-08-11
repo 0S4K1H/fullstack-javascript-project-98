@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../cli.js';
 
-const getRandomNumber = (min = 1, max = 100) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -23,7 +22,7 @@ const calculate = (num1, num2, operator) => {
 };
 
 export default function runCalcGame() {
-  const name = greetUser(); // Saludo uniforme
+  const name = greetUser();
   console.log('¿Cuál es el resultado de la expresión?');
 
   let correctAnswers = 0;

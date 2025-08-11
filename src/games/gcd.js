@@ -1,15 +1,19 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../cli.js';
 
-const getRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const gcd = (a, b) => {
+// Refactor para evitar reasignar parámetros
+const gcd = (x, y) => {
+  let a = x;
+  let b = y;
+
   while (b !== 0) {
     const temp = b;
     b = a % b;
     a = temp;
   }
+
   return a;
 };
 

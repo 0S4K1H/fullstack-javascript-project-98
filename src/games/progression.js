@@ -12,7 +12,7 @@ const generateProgression = (start, step, length) => {
 };
 
 export default function runProgressionGame() {
-  const name = greetUser(); // ✅ saludo unificado
+  const name = greetUser(); 
   console.log('¿Qué número falta en la progresión?');
 
   for (let round = 0; round < roundsCount; round += 1) {

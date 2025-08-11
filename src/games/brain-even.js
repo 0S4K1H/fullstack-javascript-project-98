@@ -4,7 +4,7 @@ import greetUser from '../cli.js';
 const isEven = (num) => num % 2 === 0;
 
 export default function runEvenGame() {
-  const name = greetUser(); // ✅ saludo uniforme
+  const name = greetUser(); 
 
   console.log('Responde "yes" si el número es par, de lo contrario responde "no".');
 
