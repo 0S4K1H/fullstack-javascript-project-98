@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
 
 const roundsCount = 3;
 
@@ -11,9 +12,7 @@ const generateProgression = (start, step, length) => {
 };
 
 export default function runProgressionGame() {
-  console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('¿Cuál es tu nombre? ');
-  console.log(`¡Hola, ${name}!`);
+  const name = greetUser(); // ✅ saludo unificado
   console.log('¿Qué número falta en la progresión?');
 
   for (let round = 0; round < roundsCount; round += 1) {

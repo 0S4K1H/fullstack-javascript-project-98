@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
 
 const roundsCount = 3;
 
 const getRandomNumber = (min = 2, max = 200) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
-// Predicado: devuelve true si n es primo
 const isPrime = (n) => {
   if (n <= 1) return false;
   if (n === 2) return true;
@@ -18,10 +18,8 @@ const isPrime = (n) => {
 };
 
 export default function runPrimeGame() {
-  console.log('Bienvenido a Brain Games!');
-  const name = readlineSync.question('Cual es tu nombre? ');
-  console.log(`Hola, ${name}!`);
-  console.log('Responde "yes" si el numero dado es primo. De lo contrario, responde "no".');
+  const name = greetUser(); // ✅ saludo uniforme
+  console.log('Responde "yes" si el número dado es primo. De lo contrario, responde "no".');
 
   for (let round = 0; round < roundsCount; round += 1) {
     const number = getRandomNumber();
@@ -30,20 +28,14 @@ export default function runPrimeGame() {
 
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
-    if (answer === 'yes' || answer === 'no') {
-      if (answer === correctAnswer) {
-        console.log('Correcto!');
-      } else {
-        console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-        console.log(`Intentemoslo de nuevo, ${name}!`);
-        return;
-      }
+    if (answer === correctAnswer) {
+      console.log('¡Correcto!');
     } else {
       console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`Intentemoslo de nuevo, ${name}!`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       return;
     }
   }
 
-  console.log(`Felicidades, ${name}!`);
+  console.log(`¡Felicidades, ${name}!`);
 }

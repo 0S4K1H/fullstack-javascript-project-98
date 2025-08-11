@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
 
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
 const gcd = (a, b) => {
   while (b !== 0) {
@@ -12,9 +14,7 @@ const gcd = (a, b) => {
 };
 
 export default function runGcdGame() {
-  console.log('¡Bienvenido a Brain Games!');
-  const name = readlineSync.question('¿Cuál es tu nombre? ');
-  console.log(`¡Hola, ${name}!`);
+  const name = greetUser(); // ✅ saludo unificado
   console.log('Encuentra el máximo común divisor de los números dados.');
 
   let correctAnswers = 0;
