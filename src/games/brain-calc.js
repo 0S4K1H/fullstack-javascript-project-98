@@ -1,6 +1,9 @@
 import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
 
-const getRandomNumber = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min = 1, max = 100) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[Math.floor(Math.random() * operators.length)];
@@ -20,9 +23,7 @@ const calculate = (num1, num2, operator) => {
 };
 
 export default function runCalcGame() {
-  console.log('Bienvenido a Brain Games!');
-  const name = readlineSync.question('¿Cuál es tu nombre? ');
-  console.log(`Hola, ${name}!`);
+  const name = greetUser(); // Saludo uniforme
   console.log('¿Cuál es el resultado de la expresión?');
 
   let correctAnswers = 0;
