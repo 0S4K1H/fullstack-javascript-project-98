@@ -18,7 +18,7 @@ const isPrime = (n) => {
 
 export default function runPrimeGame() {
   const name = greetUser();
-  console.log('Responde "yes" si el número dado es primo. De lo contrario, responde "no".');
+  console.log('Responde "yes" si el numero dado es primo. De lo contrario, responde "no".');
 
   for (let round = 0; round < roundsCount; round += 1) {
     const number = getRandomNumber();
@@ -27,13 +27,13 @@ export default function runPrimeGame() {
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
     if (answer === correctAnswer) {
-      console.log('¡Correcto!');
+      console.log('Correcto!');
     } else {
       console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`¡Intentémoslo de nuevo, ${name}!`);
+      console.log(`Intentemoslo de nuevo, ${name}!`);
       return;
     }
   }
 
-  console.log(`¡Felicidades, ${name}!`);
+  console.log(`Felicidades, ${name}!`);
 }

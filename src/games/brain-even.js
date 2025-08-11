@@ -6,7 +6,7 @@ const isEven = (num) => num % 2 === 0;
 export default function runEvenGame() {
   const name = greetUser();
 
-  console.log('Responde "yes" si el número es par, de lo contrario responde "no".');
+  console.log('Responde "yes" si el numero es par, de lo contrario responde "no".');
 
   let correctAnswers = 0;
 
@@ -19,13 +19,13 @@ export default function runEvenGame() {
 
     if (answer !== correctAnswer) {
       console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`¡Intentémoslo de nuevo, ${name}!`);
+      console.log(`Intentemoslo de nuevo, ${name}!`);
       return;
     }
 
-    console.log('¡Correcto!');
+    console.log('Correcto!');
     correctAnswers += 1;
   }
 
-  console.log(`¡Felicidades, ${name}!`);
+  console.log(`Felicidades, ${name}!`);
 }

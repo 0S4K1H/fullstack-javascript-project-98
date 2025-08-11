@@ -13,7 +13,7 @@ const generateProgression = (start, step, length) => {
 
 export default function runProgressionGame() {
   const name = greetUser(); 
-  console.log('¿Qué número falta en la progresión?');
+  console.log('Que numero falta en la progresion?');
 
   for (let round = 0; round < roundsCount; round += 1) {
     const start = Math.floor(Math.random() * 10) + 1;
@@ -28,13 +28,13 @@ export default function runProgressionGame() {
     const answer = readlineSync.question('Tu respuesta: ');
 
     if (Number(answer) === correctAnswer) {
-      console.log('¡Correcto!');
+      console.log('Correcto!');
     } else {
       console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`¡Intentémoslo de nuevo, ${name}!`);
+      console.log(`Intentemoslo de nuevo, ${name}!`);
       return;
     }
   }
 
-  console.log(`¡Felicidades, ${name}!`);
+  console.log(`Felicidades, ${name}!`);
 }
