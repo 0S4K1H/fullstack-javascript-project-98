@@ -3,7 +3,7 @@ import greetUser from '../cli.js';
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-// Refactor para evitar reasignar parametros
+// Refactor para evitar reasignar parámetros
 const gcd = (x, y) => {
   let a = x;
   let b = y;
@@ -19,7 +19,7 @@ const gcd = (x, y) => {
 
 export default function runGcdGame() {
   const name = greetUser();
-  console.log('Encuentra el maximo comun divisor de los numeros dados.');
+  console.log('Encuentra el máximo común divisor de los números dados.');
 
   let correctAnswers = 0;
 
@@ -32,14 +32,14 @@ export default function runGcdGame() {
     const correctAnswer = gcd(num1, num2);
 
     if (Number(answer) === correctAnswer) {
-      console.log('Correcto!');
+      console.log('¡Correcto!');
       correctAnswers += 1;
     } else {
       console.log(`'${answer}' es una respuesta incorrecta ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`Intentemoslo de nuevo, ${name}!`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       return;
     }
   }
 
-  console.log(`Felicidades, ${name}!`);
+  console.log(`¡Felicidades, ${name}!`);
 }

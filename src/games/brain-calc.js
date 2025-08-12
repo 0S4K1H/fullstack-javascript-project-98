@@ -23,7 +23,7 @@ const calculate = (num1, num2, operator) => {
 
 export default function runCalcGame() {
   const name = greetUser();
-  console.log('Cual es el resultado de la expresion?');
+  console.log('¿Cuál es el resultado de la expresión?');
 
   let correctAnswers = 0;
 
@@ -38,14 +38,14 @@ export default function runCalcGame() {
     const userAnswer = readlineSync.question('Tu respuesta: ');
 
     if (Number(userAnswer) === correctAnswer) {
-      console.log('Correcto!');
+      console.log('¡Correcto!');
       correctAnswers += 1;
     } else {
       console.log(`'${userAnswer}' es una respuesta incorrecta ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`Intentemoslo de nuevo, ${name}!`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       return;
     }
   }
 
-  console.log(`Felicidades, ${name}!`);
+  console.log(`¡Felicidades, ${name}!`);
 }
