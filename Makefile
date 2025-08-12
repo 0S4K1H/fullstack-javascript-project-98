@@ -1,7 +1,10 @@
 install:
-	npm ci
+	npm install
 
 setup: install
+
+setup-verbose:
+	node scripts/setup.js
 
 brain-games:
 	node bin/brain-games.js

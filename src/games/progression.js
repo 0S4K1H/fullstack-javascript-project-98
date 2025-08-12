@@ -12,7 +12,7 @@ const generateProgression = (start, step, length) => {
 };
 
 export default function runProgressionGame() {
-  const name = greetUser(); 
+  const name = greetUser();
   console.log('Que numero falta en la progresion?');
 
   for (let round = 0; round < roundsCount; round += 1) {
