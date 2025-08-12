@@ -19,13 +19,13 @@ export default function runEvenGame() {
 
     if (answer !== correctAnswer) {
       console.log(`'${answer}' es incorrecto ;(. La respuesta correcta era '${correctAnswer}'.`);
-      console.log(`Intentemoslo de nuevo, ${name}!`);
+      console.log(`¡Intentémoslo de nuevo, ${name}!`);
       return;
     }
 
-    console.log('Correcto!');
+    console.log('¡Correcto!');
     correctAnswers += 1;
   }
 
-  console.log(`Felicidades, ${name}!`);
+  console.log(`¡Felicidades, ${name}!`);
 }
